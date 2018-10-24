@@ -52,4 +52,16 @@ if (questionRain === 'Y' || questionRain === 'YES') {
 else {
     alert('Better luck next time!');
 }
-console.log('users answer to if I like rain:', questionsRain);
+console.log('users answer to if I like rain:', questionRain);
+
+//Question 6 This app is a number gaming where you have to guess the number 69 
+var numGuess = parseInt(prompt('Guess a number between 1 and 100'));
+
+    while(numGuess !== 69) {
+        if (numGuess > 69) {
+        numGuess = parseInt(prompt('Your guess was to high. Try Again'));
+        } 
+        else {
+        numGuess = parseInt(prompt('Your guess was to low. Try again.'));
+        }
+    }
