@@ -1,21 +1,11 @@
 'use strict';
+//answer counter variable
+var answerCounter = 0;
+
 // this app asks five yes or no questions 
 alert('Hi! Welcome to my website, lets see how well you know me!');
 // Tells the user to answer with y/yes/n/no
-alert('Answer with Y/YES/N/NO')
-// function for answerCounter 
-var answerCounter = 0;
-function counterOne() {
-  if (answerCounter >= 3) {
-    alert('You got ' + answerCounter + ' right!');
-  }
-  else if (answerCounter == 6) {
-    alert('You got ' + answerCounter + ' correct! CONGRATS!!');
-  }
-  else {
-    alert('You got ' + answerCounter + ' answer correct. WORK HARDER!');
-  }
-}
+alert('Answer with Y/YES/N/NO');
 
 //functions for question1:
 function questionOne() {
@@ -141,7 +131,17 @@ function questionSeven() {
   
   }
 }
-  // tallys all of the users questions using answerCounter++ after correct answers
+
+  //calls the functions
+  questionOne();
+  questionTwo();
+  questionThree();
+  questionFour();
+  questionFive();
+  questionSix();
+  questionSeven();
+
+  //tallys the total number of correct answers
   if (answerCounter >= 3) {
     alert('You got ' + answerCounter + ' right!');
   }
