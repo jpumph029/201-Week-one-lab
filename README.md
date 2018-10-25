@@ -1,3 +1,3 @@
 # Lab03
-Joseph Pumphrey
+Joseph Pumphrey,
 Alistair too
