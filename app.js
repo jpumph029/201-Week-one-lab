@@ -8,7 +8,7 @@ alert('Answer with Y/YES/N/NO')
 var questionLoc = prompt('Am I from Seattle?').toUpperCase();
 if (questionLoc === 'N' || questionLoc === 'NO') {
     alert('You are correct! I am from Oregon.');
-} 
+}
 else {
     alert('Better luck next time!');
 }
@@ -18,7 +18,7 @@ console.log('users answer to if I am from seattle:', questionLoc);
 var questionCode = prompt('Can I code in JavaScript').toUpperCase();
 if (questionCode === 'Y' || questionCode === 'YES') {
     alert('You are correct! this code was written in JavaScript.');
-} 
+}
 else {
     alert('Better luck next time!');
 }
@@ -27,41 +27,51 @@ console.log('users answer to if I can code in javascript:', questionCode);
 // asks if I am your friend
 var questionFriend = prompt('Can I be your friend').toUpperCase();
 if (questionFriend === 'Y' || questionFriend === 'YES') {
-    alert('Awesome! I cant wait');
+    alert('Awesome!');
 }
 else {
-    alert('I will see you at PAX then!!!!');
+    alert('Better luck next time!');
 }
 console.log('users answer to if I am their friend:', questionFriend);
 
-// asks if I am good looking
-var questionLooks = prompt('Do I look good?').toUpperCase();
+// asks if I enjoy coffee
+var questionLooks = prompt('Do I enjoy coffee?').toUpperCase();
 if (questionLooks === 'Y' || questionLooks === 'YES') {
-    alert('thanks :)');
+    alert('I love the smell and taste of coffee');
 }
 else {
-    alert('yes*');
+    alert('Better luck next time!');
 }
-console.log('users answer to if I amtheir friend:', questionLooks);
+console.log('users answer to if I enjoy coffee:', questionLooks);
 
 // asks if I like the rain.
 var questionRain = prompt('Do I like the rain?').toUpperCase();
 if (questionRain === 'Y' || questionRain === 'YES') {
     alert('I love it!!!');
-} 
+}
 else {
     alert('Better luck next time!');
 }
 console.log('users answer to if I like rain:', questionRain);
 
-//Question 6 This app is a number gaming where you have to guess the number 69 
+//Question 6 This app is a number gaming where you have to guess the number 69 with only 4 trys
 var numGuess = parseInt(prompt('Guess a number between 1 and 100'));
+var counter = 0;
 
-    while(numGuess !== 69) {
-        if (numGuess > 69) {
-        numGuess = parseInt(prompt('Your guess was to high. Try Again'));
-        } 
-        else {
-        numGuess = parseInt(prompt('Your guess was to low. Try again.'));
-        }
+while (numGuess !== 69 && counter < 3) {
+    if (numGuess > 69) {
+        counter++;
+        numGuess = parseInt(prompt('Your guess was to high. Try Again.'));
     }
+    else if (numGuess < 69) {
+        counter++;
+        numGuess = parseInt(prompt('Your guess was to low. Try Again.'))
+    }
+}
+if (numGuess === 69) {
+    alert('You guessed the right answer!');
+}
+else{
+    alert('you ran out of trys..');
+}
+//Question 7 adds the the questions 1-5 together giving them a total number of questions the got done correctly being 1 and n being 0
