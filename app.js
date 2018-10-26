@@ -90,6 +90,10 @@ function questionSix() {
       counter++;
       numGuess = parseInt(prompt('Your guess was to low. Try Again.'))
     }
+    else {
+      numGuess = parseInt(prompt('That is not a valid answer. Try'));
+      counter++;
+    }
   }
   if (numGuess === 69) {
     alert('You guessed the right answer!');
@@ -98,6 +102,7 @@ function questionSix() {
   else if (counter == 3) {
     alert('you ran out of trys..');
   }
+
 }
 
 //function for question7:
@@ -106,9 +111,9 @@ function questionSeven() {
   var question7 = prompt('What is a state I have lived in?').toUpperCase();
   var counter7 = 0;
   var response = false
-  
+
   while (counter7 < 5 && response == false) {
-  
+
     for (var i = 0; i <= stateOptions.length; i++) {
       if (question7 == stateOptions[i]) {
         alert('you are correct');
@@ -128,26 +133,24 @@ function questionSeven() {
       question7 = prompt('Not that state! Try again.');
       counter7++;
     }
-  
   }
 }
+//calls the functions
+questionOne();
+questionTwo();
+questionThree();
+questionFour();
+questionFive();
+questionSix();
+questionSeven();
 
-  //calls the functions
-  questionOne();
-  questionTwo();
-  questionThree();
-  questionFour();
-  questionFive();
-  questionSix();
-  questionSeven();
-
-  //tallys the total number of correct answers
-  if (answerCounter >= 3) {
-    alert('You got ' + answerCounter + ' right!');
-  }
-  else if (answerCounter == 6) {
-    alert('You got ' + answerCounter + ' correct! CONGRATS!!');
-  }
-  else {
-    alert('You got ' + answerCounter + ' answer correct. WORK HARDER!');
-  }
+//tallys the total number of correct answers
+if (answerCounter >= 3) {
+  alert('You got ' + answerCounter + ' right!');
+}
+else if (answerCounter == 6) {
+  alert('You got ' + answerCounter + ' correct! CONGRATS!!');
+}
+else {
+  alert('You got ' + answerCounter + ' answer correct. WORK HARDER!');
+}
