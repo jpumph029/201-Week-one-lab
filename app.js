@@ -2,7 +2,7 @@
 //answer counter variable
 var answerCounter = 0;
 
-// this app asks five yes or no questions 
+// this app asks five yes or no questions and then 2 other questions adds the total of correct answers and gives the result at the end.
 alert('Hi! Welcome to my website, lets see how well you know me!');
 // Tells the user to answer with y/yes/n/no
 alert('Answer with Y/YES/N/NO');
@@ -113,7 +113,6 @@ function questionSeven() {
   var response = false
 
   while (counter7 < 5 && response == false) {
-
     for (var i = 0; i <= stateOptions.length; i++) {
       if (question7 == stateOptions[i]) {
         alert('you are correct');
@@ -135,7 +134,7 @@ function questionSeven() {
     }
   }
 }
-//calls the functions
+// calls the functions
 questionOne();
 questionTwo();
 questionThree();
